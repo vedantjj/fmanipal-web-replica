@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula Racing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #ddd;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: 80%;
+            max-width: 400px;
+        }
+        .timeline-item:nth-child(odd) {
+            align-self: flex-start;
+        }
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+        }
+        .timeline-item h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .timeline-item p {
+            margin: 10px 0 0;
+            color: #555;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #0078d7;
+            border: 4px solid #f9f9f9;
+            border-radius: 50%;
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .timeline-item:hover {
+            background: #0078d7;
+            color: #fff;
+        }
+        .timeline-item:hover p {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formula Manipal</h1>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#team">Team</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#cars">Cars</a>
+            <a href="#media">Media</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>
+            ABOUT US! We are a team of 45 passionate and innovative students in a student engineering project based out of Manipal, Karnataka, that strives to design, conceptualise, fabricate, test, and race a single-seater open-wheel Formula-style race car. Since the beginning of FORMULA MANIPAL in 2007, our team has created 14 remarkably engineered vehicles that have led us to win countless awards in events both in India, like Formula Bharat and competitions around the world, including ones that take place in Italy, Germany, Austria, The Czech Republic, and the United Kingdom.
+
+            ​<br><br>
+
+            Our motto, "Engineered with Passion", pushes us to improve our performance year after year, each year, to produce better, more efficient, and more powerful cars that can take this team to greater heights. This year marks 17 years of our beautiful legacy. Stick around to watch us FLY!!
+        </p>
+        <img src="images/team-photo.png" alt="Team Photo of Formula Manipal" class="about-image">
+    </section>
+
+    <section id="team" class="team">
+        <h2>Our Team</h2>
+        <p>Meet our amazing team members who make everything possible!</p>
+        <img src="images/team-photo.png" alt="Team Picture" class="team-image">
+    </section>
+
+    <section id="sponsors" class="sponsors">
+        <h2>Our Sponsors</h2>
+        <!-- Container for sponsors with links -->
+        <div class="sponsor-logos">
+            <a href="https://www.manipal.edu/mu.html" target="_blank"><img src="images/sponsor1.png" alt="Sponsor 1"></a>
+            <a href="https://www.batemo.com/" target="_blank"><img src="images/sponsor2.png" alt="Sponsor 2"></a>
+            <a href="https://www.analog.com/en/index.html" target="_blank"><img src="images/sponsor3.png" alt="Sponsor 3"></a>
+        </div>
+    </section>
+
+    <section id="cars" class="cars">
+        <h2>Our Cars</h2>
+        <p>Explore the engineering marvels designed by Formula Manipal over the years.</p>
+        <!-- Container for one larger image -->
+        <div class="car-image" style="text-align: center;">
+            <img src="images/car1.png" alt="Car Image" class="car-img" style="max-width: 100%; height: auto;">
+        </div>
+    </section>
+
+    <section id="media" class="media">
+        <h2>Media</h2>
+        <p>Check out our latest updates, photos, and videos from events and workshops.</p>
+        <!-- Container for one larger image -->
+        <div class="media-image" style="text-align: center;">
+            <img src="images/media1.png" alt="Media Image" class="media-img" style="max-width: 100%; height: auto;">
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline">
+        <h2>Our Journey</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <h3>2007</h3>
+                <p>Formula Manipal was founded.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2010</h3>
+                <p>First international event participation in Italy.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2015</h3>
+                <p>Developed our first electric race car.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2023</h3>
+                <p>Marked 17 years of innovation and excellence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch!</h2>
+        <p>Vibhas Srivastava<br>Team Manager<br>Formula Manipal<br>Phone: +91 - 8460730945<br>Email: formulamanipal@manipal.edu</p>
+        <div class="contact-form">
+            <input type="text" placeholder="First Name *" required>
+            <input type="text" placeholder="Last Name *" required>
+            <input type="email" placeholder="Email *" required>
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Message" rows="4"></textarea>
+            <button type="submit">Submit</button>
+        </div>
+        <div class="social-icons" style="text-align: center;">
+            <a href="https://instagram.com/formulamanipal" title="Instagram" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </section>
+</body>
+</html>
+
